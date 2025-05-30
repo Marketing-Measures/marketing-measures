@@ -1,5 +1,5 @@
 # %%
-!pip install marketing_measures
+!pip install marketing_measures --no-deps
 
 # %%
 import pandas as pd
@@ -7,7 +7,7 @@ import pandas as pd
 from marketing_measures import MarketingEmphasisScorer
 
 # %%
-scorer = MarketingEmphasisScorer(model_name="mixedbread-ai/mxbai-embed-large-v1")
+scorer = MarketingEmphasisScorer(model_name="sentence-transformers/all-mpnet-base-v2")
 
 # %%
 scorer.get_model_info()["all_dimension_names_in_order"]
