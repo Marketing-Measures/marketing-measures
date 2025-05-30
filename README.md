@@ -23,6 +23,8 @@ pip install marketing_measures
 
 ## Usage
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Marketing-Measures/marketing-measures/blob/main/examples/example.ipynb)
+
 ```python
 import pandas as pd
 from marketing_measures import MarketingEmphasisScorer

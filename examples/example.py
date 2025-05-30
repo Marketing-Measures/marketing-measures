@@ -1,11 +1,15 @@
+# %%
 import pandas as pd
 
 from marketing_measures import MarketingEmphasisScorer
 
+# %%
 scorer = MarketingEmphasisScorer(model_name="mixedbread-ai/mxbai-embed-large-v1")
 
+# %%
 scorer.get_model_info()["all_dimension_names_in_order"]
 
+# %%
 texts = [
     "The firm uses AI to understand customer needs and preferences.",
     "We continuously scan the market to gather insights about competitors.",
@@ -49,13 +53,17 @@ texts = [
     "Sales controlling enables better forecasting and performance evaluation.",
 ]
 
+# %%
 results = scorer.score_texts(
     texts=texts,
     zca_transform="estimate",
     batch_size=32,
 )
 
+# %% [markdown]
 # Results for marketing capabilities dimensions
+
+# %%
 df = pd.DataFrame(results)
 # Ensure the DataFrame has the expected columns for clarity, though the scorer should produce them.
 marketing_capability_dimensions_list = [
@@ -69,10 +77,16 @@ marketing_capability_dimensions_list = [
     "selling capabilities",
 ]
 
+# %%
 df[marketing_capability_dimensions_list]
+
+# %%
 df["text"] = texts
 
+# %% [markdown]
 # Top 3 sentences text for each dimension (only text)
+
+# %%
 for dimension in marketing_capability_dimensions_list:
     print(f"Top 3 sentences for {dimension}:")
     top_indices = df[dimension].nlargest(3).index
