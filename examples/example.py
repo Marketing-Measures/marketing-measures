@@ -1,4 +1,7 @@
 # %%
+!pip install marketing_measures
+
+# %%
 import pandas as pd
 
 from marketing_measures import MarketingEmphasisScorer
@@ -65,7 +68,6 @@ results = scorer.score_texts(
 
 # %%
 df = pd.DataFrame(results)
-# Ensure the DataFrame has the expected columns for clarity, though the scorer should produce them.
 marketing_capability_dimensions_list = [
     "marketing information management",
     "marketing planning capabilities",
