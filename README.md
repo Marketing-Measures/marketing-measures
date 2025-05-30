@@ -156,7 +156,7 @@ scores_raw = scorer.score_texts(texts, zca_transform='none')
 
 **Score and estimate ZCA from input data** (need larger dataset for better estimation)
 ```python
-scores_zca_estimated, zca_models = scorer.score_texts(
+scores_zca_estimated = scorer.score_texts(
     texts, 
     zca_transform='estimate', 
 )
