@@ -1,3 +1,6 @@
+# %% [markdown]
+# You are recommended to select `GPU` as the hardware accelerator. In Colab, navigate menu to `Runtime` -> `Change runtime type` and select `GPU`.
+
 # %%
 !pip install marketing_measures --no-deps
 
@@ -59,7 +62,7 @@ texts = [
 # %%
 results = scorer.score_texts(
     texts=texts,
-    zca_transform="estimate",
+    zca_transform="pre-trained",
     batch_size=32,
 )
 

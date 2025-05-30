@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "marketing-measures"
-version = "0.1.4"
+version = "0.1.5"
 authors = [
     { name = "Hoorsana Damavandi, Feng Mai, Vivek Astvansh", email = "hdamavan@utk.edu" },
 ]
